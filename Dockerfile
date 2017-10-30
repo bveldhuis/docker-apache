@@ -9,9 +9,6 @@ LABEL build_version="Apache version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 # copy sources.list
 COPY sources.list /etc/apt/
 
-RUN apt-get install python-software-properties -qy && \
-RUN add-apt-repository ppa:ondrej/php -qy && \
-
 ENV APTLIST="php7.1 libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-mbstring php7.1-gd php7.1-intl php7.1-xml php7.1-mysql php7.1-mcrypt php7.1-zip wget inotify-tools libapache2-mod-proxy-html"
 
 # install main packages
