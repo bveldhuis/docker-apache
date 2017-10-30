@@ -12,7 +12,8 @@ COPY sources.list /etc/apt/
 ENV APTLIST="php7.1 libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-mbstring php7.1-gd php7.1-intl php7.1-xml php7.1-mysql php7.1-mcrypt php7.1-zip wget inotify-tools libapache2-mod-proxy-html"
 
 # install main packages
-RUN apt-get update -qy && \
+RUN add-apt-repository -y ppa:ondrej/php && \
+apt-get update -qy && \
 apt-get install $APTLIST -qy && \
 
 # cleanup
