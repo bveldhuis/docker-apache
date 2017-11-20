@@ -22,7 +22,7 @@ RUN useradd -u 911 -U -d /config -s /bin/false abc && \
 CMD ["/sbin/my_init"]
 
 # Set correct environment variables
-ENV APTLIST="apache2 apache2-bin perl libaprutil1-dbd-mysql libapache2-mod-fastcgi openssl wget inotify-tools php7.1 php7.1-curl libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-mbstring php7.1-gd php7.1-intl php7.1-xml php7.1-mysql php7.1-mcrypt php7.1-zip" LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
+ENV APTLIST="apache2 apache2-bin perl libaprutil1-dbd-mysql libapache2-mod-fastcgi openssl wget inotify-tools php7.1 php7.1-curl libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-mbstring php7.1-gd php7.1-intl php7.1-xml php7.1-mysql php7.1-mcrypt php7.1-zip php7.1-bcmath" LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 
 # Set the locale
 RUN locale-gen en_US.UTF-8
